@@ -1,0 +1,10 @@
+<h1>Pagination</h1>
+
+<ul> 
+  <li *ngFor="let post of Posts | paginate:{itemsPerPage: 4, currentPage: p}" style="list-style:none;background-color:#EEE;padding:15px;margin-bottom:40px;">
+    <span>{{post.id}}</span>
+    <h3>{{post.title}}</h3>
+  </li>
+</ul>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
